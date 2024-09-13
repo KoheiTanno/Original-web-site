@@ -1,0 +1,290 @@
+/*
+settings
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Yu Mincho;
+    box-sizing: border-box;
+}
+
+
+
+/*
+header
+*/
+header{
+  width: 100%;
+  height: 100px;
+  background: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding: 0 0 8px 100px;
+}
+
+img{
+    width: 75px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.logo{
+    font: 30px;
+}
+
+/*
+main
+*/
+main{
+
+  width: 100%;
+  background-color:black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;   
+}
+
+/* {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  } */
+
+h1 {
+  margin-bottom: 100px;
+}
+h2 {
+  margin-bottom: 50px;
+}
+/* スライドする要素 */
+.content {
+  width: 400px;
+  height: 400px;
+}
+.content:nth-child(1) {
+  background-color: tomato;
+}
+.content:nth-child(2) {
+  background-color: orange;
+}
+.content:nth-child(3) {
+  background-color: blue;
+}
+.content:nth-child(4) {
+  background-color: green;
+}
+.content>img{
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}
+/* スライドレールの枠 */
+.wrap {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 400px;
+  padding: 100px 0;
+
+}
+/* content4つをまとめたスライドブロック */
+.slideshow {
+  display: flex;
+  -webkit-animation: loop-slide 20s infinite linear 1s both;
+  animation: loop-slide 20s infinite linear 1s both;
+}
+@-webkit-keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* ホバー時に動きを止める（パターン2・3）*/
+.slide-paused:hover .slideshow {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.recs-wrap {
+  width: 100%;
+  text-align: center;
+}
+.section-title {
+  margin-top: 50px;
+  font-size: 25px;
+  text-decoration: underline;
+}
+.recs-wrap h1 {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.recs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 830px) {
+  .recs {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+.rec {
+  width: 31%;
+  height: 480px;
+  text-align: left;
+}
+@media screen and (max-width: 830px) {
+  .rec {
+    width: 100%;
+    height: auto;
+    margin-bottom: 41px;;
+  }
+}
+.rec img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.rec-title {
+  margin: 10px 0;
+  font-size: 19px;
+  text-decoration: underline;
+}
+.rec-bottom {
+  height: 274px;
+}
+@media screen and (max-width: 830px) {
+  .rec-bottom {
+    height: auto;
+  }
+}
+.rec-description {
+  height: 140px;
+}
+@media screen and (max-width: 830px) {
+  .rec-description {
+    height: auto;
+  }
+}
+.btn-wrap {
+  text-align: right;
+}
+button {
+  font-size: 18px;
+  background-color: #212235;
+  color: white;
+  border-radius: 5px;
+  font-family: serif;
+}
+button:hover {
+  opacity: 0.8;
+}
+.rec-bottom button {
+  padding: 8px 14px;
+}
+@media screen and (max-width: 830px) {
+  .rec-bottom button {
+    margin-top: 18px;
+  }
+}
+.contact {
+  text-align: center;
+}
+.contact h1 {
+  padding: 120px 0 50px;
+}
+@media screen and (max-width: 830px) {
+  .contact h1 {
+    padding: 60px 0 50px;
+  }
+}
+.contact p {
+  margin-bottom: 30px;
+  padding: 0 5px;
+}
+
+#section-03{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentsbox{
+  width: 80%;
+}
+
+.contentsbox>h3{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+
+.kaisha {
+  width: 80%;
+  margin-bottom: 50px;
+  }
+  
+  .kaisha th,
+  .kaisha td {
+  border: 1px solid #ccc;
+  padding: 20px;
+  }
+  
+  .kaisha th {
+  font-weight: bold;
+  background-color: black; 
+  }
+  
+  @media screen and (max-width: 767px) {
+  .kaisha,
+  .kaisha tr,
+  .kaisha td,
+  .kaisha th {display:block;}
+  .kaisha th {width:auto;}
+  }
+
+
+
+
+/*
+footer
+*/
+footer{
+  width: 100%;
+  /* height: 100px; */
+  background:#222;
+  color: white;
+  /* padding: 20px; */
+  text-align: center;
+  /* position: relative; */
+  /* bottom: 0; */
+  box-sizing: border-box;
+
+  
+}
+
+
